@@ -658,7 +658,7 @@ void    Formatter::render(Chunk* head, const ArgMap& args)
             writeAccent(c->text);
             break;
         case ctCirc:
-            writeCode(c->text);
+            writeCirc(c->text);
             break;
         case ctTilde:
             writeTilde(c->text);

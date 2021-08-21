@@ -713,7 +713,7 @@ static void        writeChunk(FILE*out, const Chunk* chunk, unsigned int depth)
     for(;chunk;chunk = chunk -> next){
         fputs(pad, out);
         fputs(keyFor(chunk -> type), out);
-fprintf(out, "[%d]", chunk -> line);
+        fprintf(out, "[%d]", chunk -> line);
         if(!chunk -> text.empty()){
             putc(' ', out);
             fputs(chunk->text.c_str(), out);

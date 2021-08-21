@@ -2,6 +2,7 @@
 #include <libgen.h>
 #include <time.h>
 #include <algorithm>
+#include <iostream>
 
 struct Html : public Formatter {
     
@@ -216,7 +217,6 @@ struct Html : public Formatter {
     void        process(Chunk* c) override
     {
         Formatter::process(c);
-        
         if(bCSS){
             out     = fopen(cssfull.c_str(), "w");
             if(!out)
@@ -620,7 +620,7 @@ struct Html : public Formatter {
             if(sty.bCss){
                 fprintf(out, "<div class=\"%s\">", sty.chunk->text.c_str());
             } else {
-                fputs("<div>\n", out);
+                fputs("<div>", out);
             }
             break;
         case tsSpan:
@@ -685,18 +685,18 @@ struct Html : public Formatter {
         case tsNone:
             break;
         case tsDiv:
-            fputs("</div>\n", out);
+            fputs("</div>", out);
             inPar   = false;
             break;
         case tsSpan:
-            fputs("</span>\n", out);
+            fputs("</span>", out);
             break;
         case tsBlock:
             fputs("</blockquote>", out);
             inPar   = false;
             break;
         case tsTable:
-            fputs("</table>\n", out);
+            fputs("</table>", out);
             inPar   = false;
             break;
         case tsFake:
