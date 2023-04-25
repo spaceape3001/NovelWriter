@@ -868,6 +868,39 @@ struct Html : public Formatter {
     {
         fputs("</th>", out);
     }
+
+    void    writeItemStart() override
+    {
+        par();
+        fputs("<li>", out);
+    }
+    
+    void    writeItemEnd()  override
+    {
+        fputs("</li>", out);
+    }
+
+    void    writeUListStart() override
+    {
+        par();
+        fputs("<ul>", out);
+    }
+    
+    void    writeUListEnd() override
+    {
+        fputs("</ul>", out);
+    }
+
+    void    writeOListStart() override
+    {
+        par();
+        fputs("<ol>", out);
+    }
+    
+    void    writeOListEnd() override
+    {
+        fputs("</ol>", out);
+    }
 };
 
 Formatter*  fmtHTML()

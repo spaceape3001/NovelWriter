@@ -227,6 +227,13 @@ void    Formatter::command(Chunk* cmd, const ArgMap& args)
     } else if(equal(cmd->text, "macros")){
         // NOT HERE
     } else if(equal(cmd->text, "olist")){
+        writeOListStart();
+        for(Chunk* a : cmd -> args){
+            writeItemStart();
+            render(a, args);
+            writeItemEnd();
+        }
+        writeOListEnd();
     } else if(equal(cmd->text, "part")){
         writePart(cmd);
     //} else if(equal(cmd->text, "scene")){
@@ -261,6 +268,13 @@ void    Formatter::command(Chunk* cmd, const ArgMap& args)
         }
         writeTRowEnd();
     } else if(equal(cmd->text, "ulist")){
+        writeUListStart();
+        for(Chunk* a : cmd -> args){
+            writeItemStart();
+            render(a, args);
+            writeItemEnd();
+        }
+        writeUListEnd();
     } else {
         
         auto def    = macros.find(cmd->text);

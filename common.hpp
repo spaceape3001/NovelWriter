@@ -345,6 +345,15 @@ protected:
     virtual void    writeTHdrStart(){}
     virtual void    writeTHdrEnd(){}
     
+    virtual void    writeUListStart(){}
+    virtual void    writeUListEnd(){}
+    
+    virtual void    writeItemStart(){}
+    virtual void    writeItemEnd(){}
+
+    virtual void    writeOListStart(){}
+    virtual void    writeOListEnd(){}
+
     //virtual void    writeStartBlock(Chunk*) {}
     //virtual void    writeEndBlock(Chunk*) {}
     //virtual void    writeStartStyle(Chunk*) {}

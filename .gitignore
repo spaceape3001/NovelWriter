@@ -34,6 +34,10 @@ nw
 
 # Old stuff (local only)
 .dep
+dep
 
 # Temps 
 *~
+
+# The other source control
+.svn

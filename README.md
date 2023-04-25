@@ -156,8 +156,6 @@ Define macros for later use.  See macros section.
 	
 An ordered list.
 
-*This feature is not yet implemented!*
-
 ##### Part
 	
 	@part{ <title> }
@@ -205,8 +203,6 @@ A regular row for the table.  One column per argument.
 	@ulist{<entry1>}{<entry2>}...{<entryN>}
 	
 An unordered list.
-
-*This feature is not yet implemented!*
 
 ### Styles
 
